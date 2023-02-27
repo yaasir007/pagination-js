@@ -59,7 +59,7 @@ function SetupPagination(items, wrapper, rows_per_page) {
   let page_count = Math.ceil(items.length / rows_per_page); //finding the number of pagination needed to display
 
   for (let i = 1; i < page_count + 1; i++) {
-    let btn = PaginationButton(i);
+    let btn = PaginationButton(i, items);
     wrapper.appendChild(btn)
   }
 }
@@ -70,6 +70,16 @@ function PaginationButton(page, items) {
   button.innerText = page;
 
   if (current_page == page) button.classList.add('active');
+  button.addEventListener('click', () => {
+    current_page = page;
+    DisplayList(items, list_element, rows, current_page);
+
+    let current_btn = document.querySelector('.pagenumbers button.active');
+
+    current_btn.classList.remove('active');
+
+    button.classList.add('active');
+  })
 
   return button;
 }
