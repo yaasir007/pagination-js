@@ -43,10 +43,36 @@ function DisplayList(items, wrapper, rows_per_page, page) {
   const paginatedItems = items.slice(loop_start, loop_end); //find the items to display
 
   for(let i = 0; i < paginatedItems.length; i++) {
-    console.log(paginatedItems[i]);
+    let item = paginatedItems[i];
+
+    let item_element = document.createElement('div');
+    item_element.classList.add('item');
+    item_element.innerText = item;
+
+    wrapper.appendChild(item_element);
   }
-
-
 }
 
-DisplayList(list_items, list_element, rows, 2)
+function SetupPagination(items, wrapper, rows_per_page) {
+  wrapper.innerHTML = "";
+
+  let page_count = Math.ceil(items.length / rows_per_page); //finding the number of pagination needed to display
+
+  for (let i = 0; i < page_count + 1; i++) {
+    let btn = PaginationButton(i);
+    wrapper.appendChild(btn)
+  }
+}
+
+
+function PaginationButton(page, items) {
+  let button = document.createElement('button');
+  button.innerText = page;
+
+  if (current_page == page) button.classList.add('active');
+
+  return button;
+}
+
+DisplayList(list_items, list_element, rows, 1)
+SetupPagination(list_items, pagination_element, rows);
