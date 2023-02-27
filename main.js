@@ -58,7 +58,7 @@ function SetupPagination(items, wrapper, rows_per_page) {
 
   let page_count = Math.ceil(items.length / rows_per_page); //finding the number of pagination needed to display
 
-  for (let i = 0; i < page_count + 1; i++) {
+  for (let i = 1; i < page_count + 1; i++) {
     let btn = PaginationButton(i);
     wrapper.appendChild(btn)
   }
