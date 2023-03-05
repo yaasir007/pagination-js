@@ -20,7 +20,12 @@ const list_items = [
   "Item 19",
   "Item 20",
   "Item 21",
-  "Item 22"
+  "Item 22",
+  "Item 23",
+  "Item 24",
+  "Item 25",
+  "Item 26",
+  "Item 27",
 ];
 
 const list_element = document.querySelector("#list");
