@@ -16,6 +16,7 @@ header {
   height: 60px;
   background-color: #EEE;
   box-shadow: 0px 0px 10 rgb(0, 0, 0, 0.2);
+  animation: fadeIn 5s;
 }
 
 main {
@@ -30,6 +31,16 @@ main .list {
   background-color: #fff;
   border: 1px solid #ccc;
   margin-top: 25px;
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 main .list .item {
@@ -50,6 +61,7 @@ main .list .item:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 5s;
 }
 
 .pagenumbers button {
