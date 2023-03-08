@@ -16,7 +16,7 @@ header {
   height: 60px;
   background-color: #EEE;
   box-shadow: 0px 0px 10 rgb(0, 0, 0, 0.2);
-  animation: fadeIn 3s forwards normal 1;
+  animation: fadeIn 3s;
 }
 
 main {
@@ -63,7 +63,7 @@ main .list .item:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 3s forwards normal 1;
+  animation: fadeIn 3s;
 }
 
 .pagenumbers button {
