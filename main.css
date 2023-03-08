@@ -31,7 +31,8 @@ main .list {
   background-color: #fff;
   border: 1px solid #ccc;
   margin-top: 15px;
-  animation: fadeIn 3s forwards normal 1;
+  animation: fadeIn 3s;
+  /* animation-delay: 10s; */
 }
 
 @keyframes fadeIn {
