@@ -38,10 +38,12 @@ main .list {
 @keyframes fadeIn {
   from {
     transform: translateX(-200%);
+    opacity: 0;
   }
 
   to {
     transform: translateX(0px);
+    opacity: 1;
   }
 }
 
